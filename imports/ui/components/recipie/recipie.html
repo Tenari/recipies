@@ -1,0 +1,31 @@
+<template name="recipie">
+  <h1>{{name}}</h1>
+  <h2>Ingredients</h2>
+  <ul>
+    {{#each ingredient in ingredients}}
+      <li>{{ingredient.qty}} {{ingredient.unit}} {{ingredient.name}}</li>
+    {{/each}}
+  </ul>
+  <h2>Instructions</h2>
+  <ol>
+    {{#each step in steps}}
+      <li>{{step}}</li>
+    {{/each}}
+  </ol>
+  <div>
+    <h3>Nutrition Facts</h3>
+    <div><strong>Serving size</strong><span>{{serving_size}}</span></div>
+    <div>Amount per serving</div>
+    <div><strong>Calories</strong><span>{{calories}}</span></div>
+    <div><strong>Total Fat</strong><span>{{fat_g}}g</span></div>
+    <div><strong>Cholesterol</strong><span>{{cholesterol_mg}}mg</span></div>
+    <div><strong>Sodium</strong><span>{{sodium_mg}}mg</span></div>
+    <div><strong>Total Carbohydrate</strong><span>{{carb_g}}g</span></div>
+    <div><strong>Protein</strong><span>{{protein_g}}g</span></div>
+    <div><span>Vitamin D</span><span>{{vit_d_mg}}mg</span></div>
+    <div><span>Calcium</span><span>{{calcium}}mg</span></div>
+    <div><span>Iron</span><span>{{iron_mg}}mg</span></div>
+    <div><span>Potassium</span><span>{{potassium_mg}}mg</span></div>
+  </div>
+
+</template>
